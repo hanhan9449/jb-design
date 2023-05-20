@@ -5,15 +5,13 @@ import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({
-    insertTypesEntry: true
-  })],
+  plugins: [react()],
   build: {
     lib: {
       entry: path.resolve(__dirname, "public-api.ts"),
       formats: ['es', 'umd', 'cjs'],
       name: "public-api",
-      fileName: (format) => `public-api.${format}.js`
+      // fileName: (format) => `public-api.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
