@@ -334,7 +334,13 @@
   "projects": [
     {
       "packageName": "@jb/react-ui",
-      "projectFolder": "libs/jb-react-ui"
+      "projectFolder": "libs/jb-react-ui",
+      "tags": ["jb-design", "react"]
+    },
+    {
+      "packageName": "@jb/utils",
+      "projectFolder": "libs/jb-utils",
+      "tags": ["jb-design", "util"]
     }
     // {
     //   /**
