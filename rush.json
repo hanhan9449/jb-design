@@ -341,6 +341,11 @@
       "packageName": "@jb/utils",
       "projectFolder": "libs/jb-utils",
       "tags": ["jb-design", "util"]
+    },
+    {
+      "packageName": "@jb/blog-power-by-react",
+      "projectFolder": "apps/blog-power-by-react",
+      "tags": ["app"]
     }
     // {
     //   /**
