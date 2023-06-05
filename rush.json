@@ -346,6 +346,11 @@
       "packageName": "@jb/blog-power-by-react",
       "projectFolder": "apps/blog-power-by-react",
       "tags": ["app"]
+    },
+    {
+      "packageName": "@jb/jb-design-react-ui-playground",
+      "projectFolder": "apps/jb-design-react-ui-playground",
+      "tags": ["jb-design", "playground"]
     }
     // {
     //   /**

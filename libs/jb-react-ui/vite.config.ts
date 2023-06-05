@@ -14,7 +14,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "public-api.ts"),
       formats: ['es', 'umd', 'cjs'],
       name: "public-api",
-      fileName: (format) => `public-api.${format}.js`
+      // fileName: (format) => `public-api.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

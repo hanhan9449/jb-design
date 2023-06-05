@@ -13,7 +13,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@types/node": "~20.2.1",
-    "vite-plugin-dts": "~2.3.0"
+    "vite-plugin-dts": "~2.3.0",
+    "vitest": "~0.31.4"
   },
   "exports": {
     ".": {
