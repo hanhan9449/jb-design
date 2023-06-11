@@ -1,5 +1,6 @@
 import {createEffect, createResource, Show, untrack} from "solid-js";
 import {toDataURL} from 'qrcode'
+import localStyle from './QrCode.module.pcss'
 
 interface QrCodeProps {
     value?: string | null
@@ -16,7 +17,10 @@ export function QrCode(p: QrCodeProps) {
         }
         return await toDataURL(canvasEl, p.value, {
             width: WIDTH,
-            margin: 0
+            margin: 0,
+            color: {
+                light: '#00000000'
+            }
         })
     })
     createEffect(() => {
@@ -27,6 +31,6 @@ export function QrCode(p: QrCodeProps) {
         })
     })
     return <Show when={p.value?.length || 0 > 0}>
-        <img width={WIDTH} height={WIDTH} src={qrDataUrl()}/>
+        <div class={localStyle.qrcode} style={{'--mask': 'url("' + qrDataUrl() + '")'}}/>
     </Show>
 }

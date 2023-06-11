@@ -4,6 +4,8 @@ import {createSignal, onMount} from "solid-js";
 import copy from 'copy-to-clipboard'
 import {mergeClasses} from '@jb/utils'
 import {atom} from "./atom-css";
+import {JBButton, JBTextarea} from "@jb/solidjs-ui";
+import '@jb/solidjs-ui/style.css'
 
 
 const App: Component = () => {
@@ -22,22 +24,22 @@ const App: Component = () => {
         <div>
 
 
-        <textarea
+        <JBTextarea
             class={mergeClasses(atom.width500px, atom.fontSize20px, atom.fontFamilySanSerif)}
             value={input()} onInput={(e) => {
             setInput(e.target.value)
         }}/>
         </div>
         <div>
-            <button onClick={() => {
+            <JBButton onClick={() => {
                 copy(input())
                 alert('复制成功')
-            }}>Copy</button>
-            <button onClick={() => {
+            }}>Copy</JBButton>
+            <JBButton onClick={() => {
                 const u = new URL(location.href)
                 u.searchParams.set('share', input())
                 copy(String(u))
-            }}>Share link</button>
+            }}>Share link</JBButton>
         </div>
         <div>
 

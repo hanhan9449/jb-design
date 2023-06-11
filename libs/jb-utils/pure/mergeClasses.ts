@@ -1,6 +1,6 @@
 
 
-export function mergeClasses(...ss: (string | false)[]);
+export function mergeClasses(...ss: (string | false | undefined)[]): string;
 export function mergeClasses() {
     let result = ''
     const n = arguments.length

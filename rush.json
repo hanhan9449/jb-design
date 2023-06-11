@@ -338,6 +338,11 @@
       "tags": ["jb-design", "react"]
     },
     {
+      "packageName": "@jb/solidjs-ui",
+      "projectFolder": "libs/solidjs-ui",
+      "tags": ["jb-design", "solidjs"]
+    },
+    {
       "packageName": "@jb/utils",
       "projectFolder": "libs/jb-utils",
       "tags": ["jb-design", "util"]
