@@ -88,9 +88,6 @@ importers:
       vite: 4.3.9
       vite-plugin-solid: 2.7.0_solid-js@1.7.6+vite@4.3.9
 
-  ../../libs/atom-css:
-    specifiers: {}
-
   ../../libs/jb-react-ui:
     specifiers:
       '@jb/utils': workspace:*
@@ -163,7 +160,6 @@ importers:
 
   ../../libs/solidjs-ui:
     specifiers:
-      '@jb/atom-css': workspace:*
       '@jb/utils': workspace:*
       '@types/node': ~20.3.0
       solid-js: ^1.6.10
@@ -171,7 +167,6 @@ importers:
       vite: ^4.1.1
       vite-plugin-solid: ^2.5.0
     dependencies:
-      '@jb/atom-css': link:../atom-css
       '@jb/utils': link:../jb-utils
       '@types/node': 20.3.0
       solid-js: 1.7.6

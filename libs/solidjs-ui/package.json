@@ -29,7 +29,6 @@
   "dependencies": {
     "solid-js": "^1.6.10",
     "@types/node": "~20.3.0",
-    "@jb/utils": "workspace:*",
-    "@jb/atom-css": "workspace:*"
+    "@jb/utils": "workspace:*"
   }
 }
