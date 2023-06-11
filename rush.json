@@ -348,6 +348,11 @@
       "tags": ["app"]
     },
     {
+      "packageName": "@jb/utils-power-by-solidjs",
+      "projectFolder": "apps/utils-power-by-solidjs",
+      "tags": ["app"]
+    },
+    {
       "packageName": "@jb/jb-design-react-ui-playground",
       "projectFolder": "apps/jb-design-react-ui-playground",
       "tags": ["jb-design", "playground"]
