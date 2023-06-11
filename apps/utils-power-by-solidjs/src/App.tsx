@@ -2,6 +2,9 @@ import type { Component } from 'solid-js';
 import {QrCode} from "./components/QrCode";
 import {createSignal, onMount} from "solid-js";
 import copy from 'copy-to-clipboard'
+import {mergeClasses} from '@jb/utils'
+import {atom} from "./atom-css";
+
 
 const App: Component = () => {
     const [input, setInput] = createSignal('')
@@ -19,7 +22,9 @@ const App: Component = () => {
         <div>
 
 
-        <textarea value={input()} onInput={(e) => {
+        <textarea
+            class={mergeClasses(atom.width500px, atom.fontSize20px, atom.fontFamilySanSerif)}
+            value={input()} onInput={(e) => {
             setInput(e.target.value)
         }}/>
         </div>
