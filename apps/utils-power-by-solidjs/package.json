@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "vite",
-    "dev": "vite",
+    "dev": "npx concurrently \"rush build:watch --to-except @jb/utils-power-by-solidjs\" \"vite\" ",
     "build": "vite build",
     "build:watch": "npm run build",
     "serve": "vite preview"
