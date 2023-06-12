@@ -17,11 +17,10 @@ export default defineConfig({
         // fileName: (format) => `public-api.${format}.js`
       },
       rollupOptions: {
-        external: ['react', 'react-dom'],
+        external: ['solid-js'],
         output: {
           globals: {
-            react: 'React',
-            'react-dom': 'ReactDOM',
+            'solid-js': "Solidjs"
           }
         }
 
