@@ -4,7 +4,7 @@ import { createSignal, onMount } from "solid-js";
 import copy from "copy-to-clipboard";
 import { mergeClasses } from "@jb/utils";
 import { atom } from "./atom-css";
-import {Column, JBButton, JBTextarea, Row} from "@jb/solidjs-ui";
+import {JBColumn, JBButton, JBTextarea, JBRow} from "@jb/solidjs-ui";
 import "@jb/solidjs-ui/style.css";
 import {toCanvas, toDataURL} from "qrcode";
 
@@ -27,7 +27,7 @@ const App: Component = () => {
         )}
     >
       <h2>二维码生成</h2>
-        <Column space={4}>
+        <JBColumn space={4}>
 
       <div>
         <JBTextarea
@@ -43,7 +43,7 @@ const App: Component = () => {
         />
       </div>
       <div>
-          <Row space={4} >
+          <JBRow space={4} >
 
         <JBButton
           onClick={() => {
@@ -74,12 +74,12 @@ const App: Component = () => {
         >
           Share Config link
         </JBButton>
-          </Row>
+          </JBRow>
       </div>
       <div>
         <QrCode value={input()} canvas={canvasEl} />
       </div>
-        </Column>
+        </JBColumn>
     </div>
   );
 };
