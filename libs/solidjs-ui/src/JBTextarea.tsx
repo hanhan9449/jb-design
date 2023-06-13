@@ -5,8 +5,10 @@ import {geneComponentTestProperty, mergeClasses} from '@jb/utils'
 export type JBTextareaProps = {} & JSX.TextareaHTMLAttributes<HTMLTextAreaElement>
 export function JBTextarea(p: JBTextareaProps) {
     const [local, rest] = splitProps(p, ['class'])
-    return <textarea
+    return <div
+        class={localStyle.container}
+    ><textarea
         {...geneComponentTestProperty('JBTextarea')}
         class={mergeClasses(localStyle.textarea, local.class)}
-        {...rest}/>
+        {...rest}/></div>
 }
