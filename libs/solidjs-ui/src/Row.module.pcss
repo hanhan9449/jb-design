@@ -1,0 +1,8 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    --space: 0;
+    & > * + * {
+        margin-left: calc(var(--space) * 1px);
+    }
+}

@@ -4,7 +4,7 @@ import { createSignal, onMount } from "solid-js";
 import copy from "copy-to-clipboard";
 import { mergeClasses } from "@jb/utils";
 import { atom } from "./atom-css";
-import { JBButton, JBTextarea } from "@jb/solidjs-ui";
+import {Column, JBButton, JBTextarea, Row} from "@jb/solidjs-ui";
 import "@jb/solidjs-ui/style.css";
 import {toCanvas, toDataURL} from "qrcode";
 
@@ -20,8 +20,15 @@ const App: Component = () => {
   });
   let canvasEl = document.createElement('canvas')
   return (
-    <div>
+    <div
+        class={mergeClasses(
+            atom.overflowAuto,
+            atom.paddingLeft12px
+        )}
+    >
       <h2>二维码生成</h2>
+        <Column space={4}>
+
       <div>
         <JBTextarea
           class={mergeClasses(
@@ -36,6 +43,8 @@ const App: Component = () => {
         />
       </div>
       <div>
+          <Row space={4} >
+
         <JBButton
           onClick={() => {
             copy(input());
@@ -65,10 +74,12 @@ const App: Component = () => {
         >
           Share Config link
         </JBButton>
+          </Row>
       </div>
       <div>
         <QrCode value={input()} canvas={canvasEl} />
       </div>
+        </Column>
     </div>
   );
 };

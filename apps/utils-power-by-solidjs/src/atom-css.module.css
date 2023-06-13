@@ -7,3 +7,11 @@
 .fontFamilySanSerif {
     font-family: sans-serif;
 }
+
+.overflowAuto {
+    overflow: auto;
+}
+
+.paddingLeft12px {
+    padding-left: 12px;
+}
