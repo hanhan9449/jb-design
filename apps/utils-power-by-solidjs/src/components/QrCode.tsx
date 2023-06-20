@@ -51,6 +51,8 @@ export function QrCode(p: QrCodeProps) {
         })
     })
     return <Show when={p.value?.length || 0 > 0}>
-        {canvasEl}
+        <div style={{filter: 'drop-shadow(2px 4px 6px #11111117)'}}>
+            {canvasEl}
+        </div>
     </Show>
 }
