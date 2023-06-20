@@ -35,10 +35,8 @@ export function QrCode(p: QrCodeProps) {
             return
         }
         const gradient = ctx.createLinearGradient(0, 0, WIDTH, WIDTH)
-        gradient.addColorStop(0.1, 'peru')
-        gradient.addColorStop(0.3, 'pink')
-        gradient.addColorStop(0.7, 'tan')
-        gradient.addColorStop(0.9, 'lightseagreen')
+        gradient.addColorStop(0, '#bb5571')
+        gradient.addColorStop(1, '#f0c6b5')
         ctx.fillStyle = gradient
         ctx.globalCompositeOperation = 'source-over'
         ctx.fillRect(0, 0, 300, 300)
