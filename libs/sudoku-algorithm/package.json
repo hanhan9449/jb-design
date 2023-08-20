@@ -1,34 +1,40 @@
 {
-  "name": "@jb/blog-power-by-react",
+  "name": "@jb/sudoku-algorithm",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "npx concurrently \"rush build:watch --to-except @jb/blog-power-by-react\" \"vite\" ",
+    "dev": "vite",
     "build": "tsc && vite build",
+    "build:watch": "npm run build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@jb/utils": "workspace:*",
-    "rxjs": "~7.8.1",
-    "sass": "~1.65.1",
-    "mobx-react-lite": "~4.0.3",
-    "mobx": "~6.10.0",
-    "@jb/sudoku-algorithm": "workspace:*"
+    "@types/node": "~20.2.1",
+    "vite-plugin-dts": "~2.3.0",
+    "vitest": "~0.31.4",
+    "dlx": "~0.2.1"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.cjs"
+    }
+  },
+  "types": "./public-api.ts",
   "devDependencies": {
-    "@types/react": "^18.0.37",
+    "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "vite": "^4.3.2"
   }
 }

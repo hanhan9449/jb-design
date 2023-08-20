@@ -361,6 +361,11 @@
       "packageName": "@jb/jb-design-react-ui-playground",
       "projectFolder": "apps/jb-design-react-ui-playground",
       "tags": ["jb-design", "playground"]
+    },
+    {
+      "packageName": "@jb/sudoku-algorithm",
+      "projectFolder": "libs/sudoku-algorithm",
+      "tags": ["sudoku"]
     }
     // {
     //   /**

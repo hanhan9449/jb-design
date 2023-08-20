@@ -1,0 +1,97 @@
+.board {
+  --width: 96vw;
+  height: var(--width);
+  width: var(--width);
+  border: 2px solid var(--split-line-1);
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+
+}
+.board-item:not([data-row="9"]) {
+  border-bottom: 1px solid var(--split-line-3);
+}
+.board-item:is([data-row="3"], [data-row="6"]) {
+  border-bottom: 1px solid var(--split-line-2);
+}
+.board-item:not([data-column="9"]) {
+  border-right: 1px solid var(--split-line-3);
+}
+.board-item:is([data-column="3"], [data-column="6"]) {
+  border-right: 1px solid var(--split-line-2);
+}
+.board-item {
+  flex: 1 1 100%;
+  display: flex;
+  /*background-color: #9da0fc;*/
+  font-size: 22px;
+}
+.board-item.active.active {
+  background-color: var(--active-item-color);
+  /*transition: all ease 800ms;*/
+}
+.board-item.active-animate.active-animate {
+  animation: focus 150ms ease-out alternate 2;
+  transform: translateZ(0);
+
+}
+@keyframes focus {
+  from {
+    /*outline: 2px solid #fff;*/
+    box-shadow: inset 1px 1px 4px 4px rgb(0 0 0 / .1), 0 0 0px 2px rgb(255 255 255), 1px 1px 4px 2px rgb(0 0 0 / .2);
+  }
+  to {
+    /*outline: 12px solid #fff;*/
+    box-shadow: inset 1px 1px 4px 4px rgb(0 0 0 / .2), 0 0 0px 4px rgb(255 255 255), 1px 1px 4px 6px rgb(0 0 0 /.2);
+  }
+}
+.board-item.active-line {
+  background-color: var(--active-line-color);
+}
+.board-item-inner {
+  margin: auto;
+}
+
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+.number-bar-item.active {
+  animation: active 150ms ease-out alternate 2;
+
+}
+@keyframes active {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+
+}
+.number-bar-item {
+  border-radius: 8px;
+  box-shadow: -1px -1px 8px 0 rgb(0 0 0 / .1);
+  flex: 1 1 100%;
+  background-color: var(--number-bar-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 2px;
+}
+.number-bar-item-main {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--number-bar-main-color);
+}
+.number-bar-item-count {
+  font-size: 12px;
+  color: var(--number-bar-count-color);
+}
+.number-bar {
+  display: flex;
+  gap: 4px;
+  width: 98vw;
+  margin: auto;
+}
